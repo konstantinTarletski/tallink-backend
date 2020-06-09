@@ -32,6 +32,11 @@ dependencies {
 	}
 }
 
+task download(type: Exec) {
+	configurations.testCompile.files
+	commandLine 'echo', 'Downloaded all dependencies!'
+}
+
 test {
 	useJUnitPlatform()
 }
