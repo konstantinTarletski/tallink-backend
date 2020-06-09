@@ -25,8 +25,8 @@ CREATE SEQUENCE room_id_seq INCREMENT 1 START 1;
 
 CREATE TABLE participant (
     id BIGINT NOT NULL,
-    name VARCHAR(150) NOT NULL,
-    surname VARCHAR(150) NOT NULL,
+    first_name VARCHAR(150) NOT NULL,
+    last_name VARCHAR(150) NOT NULL,
     birth_date DATE NOT NULL
 );
 

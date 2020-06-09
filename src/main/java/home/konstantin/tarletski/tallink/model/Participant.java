@@ -7,28 +7,26 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalTime;
-
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "conference")
-public class Conference {
+@Table(name = "participant")
+public class Participant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "NAME", length = 150, unique = true, nullable = false)
-    private String name;
+    @Column(name = "FIRST_NAME", length = 150, unique = true, nullable = false)
+    private String firstName;
 
-    @Column(name = "DATE", nullable = false)
-    private LocalDate date;
+    @Column(name = "LAST_NAME", length = 150, unique = true, nullable = false)
+    private String lastName;
 
-    @Column(name = "TIME", nullable = false)
-    private LocalTime time;
+    @Column(name = "BIRTH_DATE", nullable = false)
+    private LocalDate birthDate;
 
 }
